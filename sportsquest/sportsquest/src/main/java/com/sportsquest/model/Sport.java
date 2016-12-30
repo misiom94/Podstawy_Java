@@ -5,6 +5,11 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+/**
+ * Klasa która odwzorowuje tabelę Sports z bazy danych.
+ * @author Mateusz Orczykowski
+ *
+ */
 @Entity
 @Table(name="Sports")
 public class Sport {
@@ -22,13 +27,19 @@ public class Sport {
 		return sport_id;
 	}
 	
-	
-
+	/**
+	 * 
+	 * @return {@link Sport#type}
+	 */
 	public String getSportName() {
 		return type;
 	}
 
 
+	/**
+	 * 
+	 * @return {@link Sport#accepted}
+	 */
 	public Integer getAccepted() {
 		return accepted;
 	}

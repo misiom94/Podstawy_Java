@@ -7,6 +7,12 @@ import org.springframework.transaction.annotation.Transactional;
 import com.sportsquest.dao.RoleDAO;
 import com.sportsquest.model.Role;
 
+/**
+ * Klasa zawierająca odwołania do metod z interfejsu RoleDAO tak by mozna było używać je w kontolerach nawigacyjnych.
+ * 
+ * @author Mateusz Orczykowski
+ *
+ */
 @Service
 @Transactional
 public class RoleServiceImpl implements RoleService {

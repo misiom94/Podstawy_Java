@@ -9,7 +9,12 @@ import org.springframework.transaction.annotation.Transactional;
 import com.sportsquest.dao.EventDAO;
 import com.sportsquest.model.Event;
 import com.sportsquest.model.User;
-
+/**
+ * Klasa zawierająca odwołania do metod z interfejsu EventDAO tak by mozna było używać je w kontolerach nawigacyjnych.
+ * 
+ * @author Mateusz Orczykowski
+ *
+ */
 @Service
 @Transactional
 public class EventServiceImpl implements EventService {
@@ -17,9 +22,7 @@ public class EventServiceImpl implements EventService {
 	@Autowired
 	private EventDAO eventDAO;
 	
-	
-	
-	
+		
 	public void addEvent(String name, String date, String city, String address, Integer host_id, Integer sport_id,String desc)
 	{
 		eventDAO.addEvent(name, date, city, address, host_id, sport_id, desc);

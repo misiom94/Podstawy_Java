@@ -29,6 +29,13 @@ public class UserDAOImpl implements UserDAO {
 		return sessionFactory.getCurrentSession();
 	}
 
+	/**
+	 * Metoda wykonuje zapytanie na tabeli Users w bazie danych. 
+	 * Zwraca użytkownika z bazy danych o określonym loginie.
+	 * @return {@link User}
+	 * 
+	 * @see User
+	 */
 	public User getUser(String login) {
 		List<User> userList = new ArrayList<User>();
 		Query query = openSession().createQuery("from User where login = :login");
@@ -39,7 +46,13 @@ public class UserDAOImpl implements UserDAO {
 		else
 			return null;	
 	}
-	
+	/**
+	 * Metoda wykonuje zapytanie na tabeli Users w bazie danych. 
+	 * Zwraca użytkownika z bazy danych o określonym numerze ID.
+	 * @return {@link User}
+	 * 
+	 * @see User
+	 */
 	public User getUserId(Integer user_id)
 	{
 		List<User> userList = new ArrayList<User>();
@@ -51,7 +64,11 @@ public class UserDAOImpl implements UserDAO {
 		else
 			return null;	
 	}
-	
+	/**
+	 * Metoda wykonuje zapytanie na tabeli Users w bazie danych. 
+	 * Zmienia wartość pola password dla określonego po numerze ID użytkownika.
+	 * 
+	 */
 	public void changePassword(Integer user_id, String password)
 	{
 		String query = "UPDATE Users SET password = '"+ password +"' WHERE user_id = '"+ user_id + "'";
@@ -59,6 +76,12 @@ public class UserDAOImpl implements UserDAO {
 		sqlQuery.executeUpdate();
 		
 	}
+	/**
+	 * Metoda wykonuje zapytanie na tabeli Users w bazie danych. 
+	 * Zwraca listę wszystkich użytkowników zapisanych w bazie danych.
+	 * 
+	 * @return List lub null
+	 */
 	public List<User> getAllUsers()
 	{
 		List<User> userList = new ArrayList<User>();
@@ -71,6 +94,10 @@ public class UserDAOImpl implements UserDAO {
 		else
 			return null;	
 	}
+	/**
+	 * Metoda wykonuje operację dodania wiersza w tabeli Users.
+	 * Dodawanie nowego użytkownika do systemu.
+	 */
 	public void addUser(String name, String surname, String login, String password,String city)
 	{
 		String sql = "INSERT INTO Users (name, surname, login, password, city,role_id) VALUES ('" + name +"', '"+ surname +"', '"+ login +"', '"+ password +"', '"+ city +"','"+ 2 +"')";
@@ -78,6 +105,11 @@ public class UserDAOImpl implements UserDAO {
 		query.executeUpdate();
 	}
 	
+	/**
+	 * Metoda wykonuje zapytane na tabeli Users w bazie danych.
+	 * Sprawdza czy podana na zwa użytkownika już istnieje w bazie danych.
+	 * @return true lub false
+	 */
 	public Boolean checkLoginAvailable(String login)
 	{
 		List<User> loginList = new ArrayList<User>();
@@ -96,6 +128,10 @@ public class UserDAOImpl implements UserDAO {
 		}
 		
 	}
+	/**
+	 * Metoda wkonuje operację usuwania wiersza w tabeli Users.
+	 * Usunięcie użytkownika z bazy danych o określonym numerze ID.
+	 */
 	public void deleteUser(Integer userId)
 	{
 		String sql = "delete from Users where user_id = :user_id";
@@ -103,12 +139,19 @@ public class UserDAOImpl implements UserDAO {
 		query.setParameter("user_id", userId);
 		query.executeUpdate();
 	}
+	
+	/**
+	 * Metoda zmienia wartośc pola blocked w tabeli Users na 0 dla podanego użytkownika określonego numerem ID. 
+	 */
 	public void activateUser(Integer userId)
 	{
 		String query = "UPDATE Users SET blocked = 0 WHERE user_id = '"+ userId + "'";
 		SQLQuery sqlQuery = openSession().createSQLQuery(query);
 		sqlQuery.executeUpdate();
 	}
+	/**
+	 * Metoda zmienia wartośc pola blocked w tabeli Users na 1 dla podanego użytkownika określonego numerem ID. 
+	 */
 	public void blockUser(Integer userId)
 	{
 		String query = "UPDATE Users SET blocked = 1 WHERE user_id = '"+ userId + "'";

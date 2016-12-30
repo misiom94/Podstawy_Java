@@ -19,6 +19,11 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.view.JstlView;
 import org.springframework.web.servlet.view.UrlBasedViewResolver;
 
+/**
+ * Klasa zawiera ustawienia konfiguracyjne aplikacji w architekturze Spring.
+ * @author Mateusz
+ *
+ */
 @Configuration
 @EnableWebMvc
 @EnableTransactionManagement

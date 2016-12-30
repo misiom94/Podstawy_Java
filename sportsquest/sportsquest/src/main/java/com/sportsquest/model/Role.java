@@ -10,7 +10,11 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
-
+/**
+ * Klasa która odwzorowuje tabelę Roles z bazy danych.
+ * @author Mateusz Orczykowski
+ *
+ */
 @Entity
 @Table(name="Roles")
 public class Role {
@@ -31,12 +35,18 @@ public class Role {
 	private Set<User> userRoles;
 
 	
-	
+	/**
+	 * 
+	 * @return {@link Role#role_id}
+	 */
 	public Integer getId() {
 		return role_id;
 	}
 
-	
+	/**
+	 * 
+	 * @return {@link Role#role}
+	 */
 	public String getRole() {
 		return role;
 	}

@@ -15,7 +15,11 @@ import javax.persistence.Table;
 import com.sportsquest.model.User;
 
 
-
+/**
+ * Klasa która odwzorowuje tabelę Users z bazy danych.
+ * @author Mateusz Orczykowski
+ *
+ */
 @Entity
 @Table(name="Users")
 public class User {
@@ -52,45 +56,73 @@ public class User {
 	
 
 
+	/**
+	 * 
+	 * @return {@link User#user_id}
+	 */
 	public Integer getUserId() {
 		return user_id;
 	}
 
-	
+	/**
+	 * 
+	 * @return {@link User#login}
+	 */
 	public String getLogin() {
 		return login;
 	}
-
+	/**
+	 * 
+	 * @return {@link User#password}
+	 */
 	public String getPassword() {
 		return password;
 	}
 
-	
+	/**
+	 * 
+	 * @return {@link User#role}
+	 */
 	public Role getRole() {
 		return role;
 	}
 
-	
+	/**
+	 * 
+	 * @return {@link User#name}
+	 */
 	public String getName() {
 		return name;
 	}
 
-	
+	/**
+	 * 
+	 * @return {@link User#surname}
+	 */
 	public String getSurname() {
 		return surname;
 	}
 
-	
+	/**
+	 * 
+	 * @return {@link User#city}
+	 */
 	public String getCity() {
 		return city;
 	}
 
-	
+	/**
+	 * 
+	 * @return {@link User#userEvents}
+	 */
 	public Set<Event> getUserEvents() {
 		return userEvents;
 	}
 
-
+	/**
+	 * 
+	 * @return {@link User#blocked}
+	 */
 	public Integer getBlocked() {
 		return blocked;
 	}

@@ -10,6 +10,12 @@ import org.springframework.stereotype.Service;
 import com.sportsquest.dao.UserDAO;
 import com.sportsquest.model.User;
 
+/**
+ * Klasa zawierająca odwołania do metod z interfejsu UserDAO tak by mozna było używać je w kontolerach nawigacyjnych.
+ * 
+ * @author Mateusz Orczykowski
+ *
+ */
 @Service
 @Transactional
 public class UserServiceImpl implements UserService {

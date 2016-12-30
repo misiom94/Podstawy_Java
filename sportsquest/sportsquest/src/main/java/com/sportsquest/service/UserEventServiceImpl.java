@@ -9,6 +9,12 @@ import org.springframework.transaction.annotation.Transactional;
 import com.sportsquest.dao.UserEventDAO;
 import com.sportsquest.model.UserEvent;
 
+/**
+ * Klasa zawierająca odwołania do metod z interfejsu UserEventDAO tak by mozna było używać je w kontolerach nawigacyjnych.
+ * 
+ * @author Mateusz Orczykowski
+ *
+ */
 @Service
 @Transactional
 public class UserEventServiceImpl  implements UserEventService{

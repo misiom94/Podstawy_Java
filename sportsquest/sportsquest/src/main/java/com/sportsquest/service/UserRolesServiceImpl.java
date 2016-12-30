@@ -6,6 +6,12 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.sportsquest.dao.UserRolesDAO;
 
+/**
+ * Klasa zawierająca odwołania do metod z interfejsu UserRolesDAO tak by mozna było używać je w kontolerach nawigacyjnych.
+ * 
+ * @author Mateusz Orczykowski
+ *
+ */
 @Service
 @Transactional
 public class UserRolesServiceImpl implements UserRolesService {

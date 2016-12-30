@@ -8,7 +8,11 @@ import org.springframework.web.WebApplicationInitializer;
 import org.springframework.web.context.ContextLoaderListener;
 import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
 import org.springframework.web.servlet.DispatcherServlet;
-
+/**
+ * Klasa zawierająca ustawienia konfiguracyjne servletów.
+ * @author Mateusz
+ *
+ */
 public class Initializer implements WebApplicationInitializer {
 
 	public void onStartup(ServletContext servletContext)

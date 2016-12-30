@@ -1,5 +1,6 @@
 package com.sportsquest.filter;
 
+
 import java.io.IOException;
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;
@@ -9,7 +10,11 @@ import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
+/**
+ * Klasa odpowiedzialna za zmianę kodowania danych na UTF-8
+ * @author Mateusz
+ *
+ */
 public class CharacterEncodingFilter implements Filter {
 
         private String encoding = "UTF-8";

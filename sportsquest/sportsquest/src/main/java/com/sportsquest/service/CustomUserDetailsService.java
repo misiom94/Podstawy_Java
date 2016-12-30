@@ -16,7 +16,11 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.sportsquest.dao.UserDAO;
 
-
+/**
+ * Klasa zawiera ustawienia zabezpieczające dla uzytkowników oraz określająca ich role w systemie.
+ * @author Mateusz
+ *
+ */
 @Service
 @Transactional(readOnly=true)
 public class CustomUserDetailsService implements UserDetailsService {
