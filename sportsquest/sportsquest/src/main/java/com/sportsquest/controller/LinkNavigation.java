@@ -260,7 +260,7 @@ public class LinkNavigation {
 	 * @return ModelAndView
 	 * 
 	 */
-	@RequestMapping(value = "/event", method = RequestMethod.POST)
+	@RequestMapping(value = "/event", params = "buttonInfo",method = RequestMethod.POST)
 	public ModelAndView eventPage(@RequestParam("buttonInfo") Integer id) {
 		ModelAndView model = new ModelAndView();
 		UserDetails userDetails = (UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
@@ -302,6 +302,18 @@ public class LinkNavigation {
 		model.addObject("event", event);
 		model.addObject("participants", participants);
 		model.addObject("host", host);
+		return model;
+
+	}
+	@RequestMapping(value = "/event",params = "buttonDelete", method = RequestMethod.POST)
+	public ModelAndView adminDeleteEventPage(@RequestParam("buttonDelete") Integer eventId) {
+		ModelAndView model = new ModelAndView();
+		List<UserEvent> userEventList = ues.getUserEventId(eventId);
+
+		ues.removeAllUserEventId(eventId);
+		es.deleteEvent(eventId);
+		model.setViewName("deleteEvent");
+
 		return model;
 
 	}

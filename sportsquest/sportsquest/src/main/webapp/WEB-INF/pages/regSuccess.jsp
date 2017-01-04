@@ -16,7 +16,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   
     <div class="panel panel-default" >
-     	<img src="/resources/img/Logo.jpg" width="40" height="40" />
+     
 	<font face="Impact" color="white" size="5"  >SPORTS QUEST</font>
     
     <div class="panel-heading clearfix" style="background-color: #333333">
@@ -29,10 +29,10 @@
 </div>
 </head>
 
-<body style='background: url("img/Background_reg_succes.jpg"); background-size:cover'>
+<body>
 </head>
 
-<body style='background: url("img/Background_reg_succes.jpg"); background-size:cover'>
+
 <center>
 <h1>Sports Quest</h1>
 <h2>Konto zostało utworzone, możesz się teraz zalogować</h2>

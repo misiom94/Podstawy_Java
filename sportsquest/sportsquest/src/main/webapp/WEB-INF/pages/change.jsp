@@ -15,7 +15,7 @@
   <div class="panel panel-default" >
     
     <div class="panel-heading clearfix" style="background-color: #333333">
-    <img src="/resources/img/Logo.jpg" width="40" height="40" />
+
 	<font face="Impact" color="white" size="5"  >SPORTS QUEST</font>
         <div class="pull-right">
         <c:set var="rola" scope="session" value="${rola}"/>
@@ -49,7 +49,7 @@
 }
 </style>
 </head>
-<body style='background: url("resources/img/Background_change.jpg"); background-size:cover'>
+<body>
 
 
 <center>

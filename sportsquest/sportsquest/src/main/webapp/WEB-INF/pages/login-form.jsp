@@ -19,10 +19,7 @@
 .error {
 	color: red;
 }
-body {
-   
-    background-image: url("resources/img/test.jpg");
-}
+
 
 </style>
 
@@ -33,8 +30,6 @@ body {
 
 
 <body>
-
-
 
 
 <center>

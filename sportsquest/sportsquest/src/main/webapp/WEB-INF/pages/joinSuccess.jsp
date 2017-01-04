@@ -17,7 +17,7 @@
   
 
   <div class="panel panel-default" >
-  	<img src="/resources/img/Logo.jpg" width="40" height="40" />
+  	
 	<font face="Impact" color="white" size="5"  >SPORTS QUEST</font>
     
     <div class="panel-heading clearfix" style="background-color: #333333">
@@ -37,7 +37,7 @@
 </div>
 
 </head>
-<body style='background: url("/resources/img/Background_join_succes.jpg"); background-size:cover'>
+<body>
 <center>
 <h1>Sports Quest</h1>
 <h2>Dołączono do eventu</h2>

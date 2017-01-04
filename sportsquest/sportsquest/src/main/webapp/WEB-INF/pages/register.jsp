@@ -20,7 +20,7 @@
 }
 </style>
 </head>
-<body style='background: url("/resources/img/Background_register.jpg"); background-size:cover'>
+<body>
 <center>
 <h1>Sports Quest</h1>
 <h2>Utwórz konto</h2>

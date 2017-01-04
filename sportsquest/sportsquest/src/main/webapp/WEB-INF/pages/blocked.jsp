@@ -42,10 +42,10 @@
 		</div>
 	</div>
 		
-
-
+<center>
+<a href="<c:url value="/j_spring_security_logout" />"><button type="button" class="btn btn-danger">Wyloguj</button></a>
 	<script src="webjars/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
-
+</center>
 </body>
 </html>

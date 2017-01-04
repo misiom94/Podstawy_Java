@@ -20,7 +20,7 @@
 	<div class="panel panel-default">
 
 		<div class="panel-heading clearfix" style="background-color: #333333">
-		<img src="/resources/img/Logo.jpg" width="40" height="40" />
+
 	<font face="Impact" color="white" size="5"  >SPORTS QUEST</font>
     
 			<div class="pull-right">
@@ -50,7 +50,7 @@
 
 </style>
 </head>
-<body style='background: url("/resources/img/Background_adminpanel.jpg"); background-size:cover'>
+<body>
 
 	<div class="container";>
 		<center>
@@ -82,7 +82,7 @@
 									name="buttonInfo" value="${event.getEventId()}"
 									class="btn btn-primary btn-change pull-center btn-back">
 									Szczegóły</button></td>
-							<td><button style="width: 100px;" type="delete"
+							<td><button style="width: 100px;" type="submit"
 									name="buttonDelete" value="${event.getEventId()}"
 									class="btn btn-primary btn-change pull-center btn-danger">
 									Usuń</button></td>
